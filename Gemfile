@@ -4,6 +4,7 @@ source 'https://rubygems.org'
 # gem "rgeo"
 # gem "rgeo-shapefile"
 gem 'rails_12factor', group: :production
+gem 'puma'
 
 
 
