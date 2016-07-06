@@ -38,9 +38,6 @@ GEM
       activemodel (= 4.2.5.1)
       activesupport (= 4.2.5.1)
       arel (~> 6.0)
-    activerecord-postgis-adapter (3.1.4)
-      activerecord (~> 4.2)
-      rgeo-activerecord (>= 4.0.4)
     activesupport (4.2.5.1)
       i18n (~> 0.7)
       json (~> 1.7, >= 1.7.7)
@@ -50,7 +47,6 @@ GEM
     arel (6.0.3)
     builder (3.2.2)
     concurrent-ruby (1.0.2)
-    dbf (3.0.5)
     dotenv (2.1.1)
     dotenv-rails (2.1.1)
       dotenv (= 2.1.1)
@@ -114,13 +110,6 @@ GEM
     rake (11.1.2)
     rest-client (1.6.7)
       mime-types (>= 1.16)
-    rgeo (0.5.3)
-    rgeo-activerecord (4.0.5)
-      activerecord (~> 4.2)
-      rgeo (~> 0.3)
-    rgeo-shapefile (0.4.1)
-      dbf (~> 3.0)
-      rgeo (~> 0.3)
     spring (1.7.1)
     sprockets (3.6.0)
       concurrent-ruby (~> 1.0)
@@ -142,7 +131,6 @@ PLATFORMS
 
 DEPENDENCIES
   active_model_serializers!
-  activerecord-postgis-adapter
   dotenv-rails
   figaro
   pg
@@ -150,8 +138,6 @@ DEPENDENCIES
   rails-api
   rails_12factor
   rest-client
-  rgeo
-  rgeo-shapefile
   spring
   unicorn
 

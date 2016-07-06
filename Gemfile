@@ -1,8 +1,8 @@
 source 'https://rubygems.org'
 
-gem 'activerecord-postgis-adapter'
-gem "rgeo"
-gem "rgeo-shapefile"
+# gem 'activerecord-postgis-adapter'
+# gem "rgeo"
+# gem "rgeo-shapefile"
 gem 'rails_12factor', group: :production
 
 
