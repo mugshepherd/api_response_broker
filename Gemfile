@@ -6,8 +6,6 @@ source 'https://rubygems.org'
 gem 'rails_12factor', group: :production
 gem 'puma'
 
-
-
 # gem 'active_model_serializers', '~> 0.8.3'
 gem 'active_model_serializers', :git => 'git://github.com/AskNative/active_model_serializers.git', :branch => '0-8-stable'
 gem 'rest-client'
