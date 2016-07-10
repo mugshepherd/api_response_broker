@@ -1,6 +1,12 @@
 class ResponsesController < ApplicationController
 def index
-		headers['Access-Control-Allow-Origin'] = 'http://localhost:8080/'
+		# headers['Access-Control-Allow-Origin'] = 'http://localhost:8080/'
+		add_header Access-Control-Allow-Headers "X-Requested-With";
+		add_header Access-Control-Allow-Methods "GET, HEAD, OPTIONS";
+		add_header Access-Control-Allow-Origin "*";
+
+
+		
 		@responses = Response.get_api_info
 		# puts "@responses: #{@responses.inspect}"
 		puts "!!![count from api] @responses count: #{@responses.count}"
