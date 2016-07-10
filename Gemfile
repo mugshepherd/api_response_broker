@@ -1,5 +1,7 @@
 source 'https://rubygems.org'
 
+
+gem 'rack-cors', :require => 'rack/cors'
 # gem 'activerecord-postgis-adapter'
 # gem "rgeo"
 # gem "rgeo-shapefile"
