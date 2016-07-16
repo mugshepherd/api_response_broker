@@ -144,9 +144,3 @@ DEPENDENCIES
   rest-client
   spring
   unicorn
-
-RUBY VERSION
-   ruby 2.2.1p85
-
-BUNDLED WITH
-   1.12.5
