@@ -34,4 +34,9 @@ gem 'unicorn'
 
 # To use debugger
 # gem 'ruby-debug19', :require => 'ruby-debug'
+
+# Authentication and Authorization
+gem 'devise'
+gem 'doorkeeper'
+
 ruby '2.2.1'
