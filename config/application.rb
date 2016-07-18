@@ -29,7 +29,7 @@ module Responses
       allow do
         origins 'https://petlemursurvey.github.io/'
         # resource '*', :headers => :any, :methods => [:get, :post, :options]
-        resource '*', :headers => :any, :methods => [:get]
+        resource '*', :headers => :any, :methods => [:get, :options]
       end
     
     end
