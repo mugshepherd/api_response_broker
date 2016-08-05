@@ -27,8 +27,8 @@ module Responses
 
     config.middleware.insert_before 0, "Rack::Cors" do
       allow do
-        # origins 'https://petlemursurvey.github.io'
-        origins 'https://localhost:8080/'
+        origins 'https://petlemursurvey.github.io'
+        # origins 'https://localhost:8080'
         resource '*', :headers => :any, :methods => [:get, :options]
       end
     
