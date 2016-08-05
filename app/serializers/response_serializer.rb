@@ -1,6 +1,15 @@
 class ResponseSerializer < ActiveModel::Serializer
   # attributes :lemurs_quantity, :month_and_year, :_geolocation, :lemur_category, :location_admin1, :location_admin2
-  attributes :lemurs_quantity, :year, :month, :lemur_category, :location_admin1, :location_admin2
+  attributes :saw_captive_lemur, :lemurs_quantity, :year, :month, :lemur_category, :location_admin1, :location_admin2
+
+
+  def saw_captive_lemur
+    if object.saw_captive_lemur
+      object.saw_captive_lemur
+    else
+      "no_answer"
+    end
+  end
 
   def lemurs_quantity
   	if object.lemurs_quantity
@@ -13,8 +22,8 @@ class ResponseSerializer < ActiveModel::Serializer
   def year
   	if object.sighting_year
   		object.sighting_year
-  	elsif object.month_and_year
-  		object.month_and_year.strftime('%Y')
+  	elsif object.sighting_year
+  		object.sighting_year.strftime('%Y')
   	else
   		"no_response"
   	end
@@ -23,8 +32,8 @@ class ResponseSerializer < ActiveModel::Serializer
   def month
   	if object.sighting_month
   		object.sighting_month
-  	elsif object.month_and_year
-  		object.month_and_year.strftime('%B').downcase
+  	elsif object.sighting_month
+  		object.sighting_month.strftime('%B').downcase
   	else
   		"no_response"
   	end
