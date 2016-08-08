@@ -1,6 +1,6 @@
 class ResponseSerializer < ActiveModel::Serializer
   # attributes :lemurs_quantity, :month_and_year, :_geolocation, :lemur_category, :location_admin1, :location_admin2
-  attributes :saw_captive_lemur, :lemurs_quantity, :year, :month, :lemur_category, :location_admin1, :location_admin2
+  attributes :saw_captive_lemur, :lemurs_quantity, :year, :month, :lemur_category, :location_admin1, :location_admin2, :environment, :captive_environment 
 
 
   def saw_captive_lemur
@@ -62,5 +62,22 @@ class ResponseSerializer < ActiveModel::Serializer
   		"no_response"
   	end
   end
+
+  def environment
+    if object.environment 
+      object.environment 
+    else
+      "no_answer"
+    end
+  end
+
+  def captive_environment
+    if object.captive_environment 
+      object.captive_environment 
+    else
+      "no_answer"
+    end
+  end
+
 
 end

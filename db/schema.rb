@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160805104154) do
+ActiveRecord::Schema.define(version: 20160808163206) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -26,6 +26,8 @@ ActiveRecord::Schema.define(version: 20160805104154) do
     t.string  "sighting_year"
     t.string  "sighting_month"
     t.string  "saw_captive_lemur"
+    t.string  "environment"
+    t.string  "captive_environment"
   end
 
 end

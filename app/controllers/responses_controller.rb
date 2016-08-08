@@ -6,7 +6,7 @@ def index
 		@responses.each do |response|
 			# puts "response: #{response.inspect}"
 
-    Response.find_or_create_by(record_id: response['_id'], saw_captive_lemur: response['saw_captive_lemur'], lemurs_quantity: response['lemurs_quantity'], sighting_month: response['sighting_month'], sighting_year: response['sighting_year'], lemur_category: response['lemur_category'], location_admin1: response['location_admin1'], location_admin2: response['location_admin2'])
+    Response.find_or_create_by(record_id: response['_id'], saw_captive_lemur: response['saw_captive_lemur'], lemurs_quantity: response['lemurs_quantity'], sighting_month: response['sighting_month'], sighting_year: response['sighting_year'], lemur_category: response['lemur_category'], location_admin1: response['location_admin1'], location_admin2: response['location_admin2'], environment: response['environment'], captive_environment: response['captive_environment'] )
 
 		end
 		# render logic updated.  see addition of `each_serializer` here.  @responses has also changed to Response.all as well.
