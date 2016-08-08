@@ -64,16 +64,16 @@ class ResponseSerializer < ActiveModel::Serializer
   end
 
   def environment
-    if object.environment 
-      object.environment 
+    if object.environment
+      object.environment
     else
       "no_answer"
     end
   end
 
   def captive_environment
-    if object.captive_environment 
-      object.captive_environment 
+    if object.captive_environment
+      object.captive_environment
     else
       "no_answer"
     end
