@@ -1,7 +1,6 @@
 class ResponseSerializer < ActiveModel::Serializer
   # attributes :lemurs_quantity, :month_and_year, :_geolocation, :lemur_category, :location_admin1, :location_admin2
-  attributes :saw_captive_lemur, :lemurs_quantity, :year, :month, :lemur_category, :location_admin1, :location_admin2, :environment, :captive_environment 
-
+  attributes :saw_captive_lemur, :lemurs_quantity, :year, :month, :lemur_category, :location_admin1, :location_admin2, :environment, :captive_environment
 
   def saw_captive_lemur
     if object.saw_captive_lemur
