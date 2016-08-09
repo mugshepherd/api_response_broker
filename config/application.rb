@@ -30,7 +30,8 @@ module Responses
         # origins 'https://petlemursurvey.github.io'
         # origins 'http://localhost:8080'
         # origins 'http://mugshepherd.bitbucket.org'
-        origins 'https://petlemursurvey.github.io', 'http://mugshepherd.bitbucket.org', 'http://localhost:8080'
+        origins 'https://petlemursurvey.github.io', 'http://mugshepherd.bitbucket.org'
+        # origins 'https://petlemursurvey.github.io', 'http://mugshepherd.bitbucket.org', 'http://localhost:8080'
         resource '*', :headers => :any, :methods => [:get, :options]
       end
     
