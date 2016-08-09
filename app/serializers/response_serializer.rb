@@ -1,6 +1,6 @@
 class ResponseSerializer < ActiveModel::Serializer
   # attributes :lemurs_quantity, :month_and_year, :_geolocation, :lemur_category, :location_admin1, :location_admin2
-  attributes :saw_captive_lemur, :lemurs_quantity, :year, :month, :lemur_category, :location_admin1, :location_admin2, :environment, :captive_environment
+  attributes :saw_captive_lemur, :lemurs_quantity, :decade, :year, :month, :lemur_category, :location_admin1, :location_admin2, :environment, :captive_environment
 
   def saw_captive_lemur
     if object.saw_captive_lemur
@@ -18,11 +18,34 @@ class ResponseSerializer < ActiveModel::Serializer
   	end
   end
 
+  def decade
+    if object.sighting_year == "before_1960"
+      "before_1960"
+    elsif object.sighting_year == "i_dont_know"
+      "i_dont_know"
+    elsif object.sighting_year.to_i >= 1960 && object.sighting_year.to_i <= 1969
+      "1960's"
+    elsif object.sighting_year.to_i >= 1970 && object.sighting_year.to_i <= 1979
+      "1970's"
+    elsif object.sighting_year.to_i >= 1980 && object.sighting_year.to_i <= 1989
+      "1980's"
+    elsif object.sighting_year.to_i >= 1990 && object.sighting_year.to_i <= 1999
+      "1990's"  
+    elsif object.sighting_year.to_i >= 2000 && object.sighting_year.to_i <= 2009
+      "2000's"
+    elsif object.sighting_year.to_i >= 2010 && object.sighting_year.to_i <= 2017
+      object.sighting_year.to_s
+    else
+      "no_response"
+    end
+  end
+
+
   def year
   	if object.sighting_year
-  		object.sighting_year
-  	elsif object.sighting_year
-  		object.sighting_year.strftime('%Y')
+  		object.sighting_year.to_s
+  	# elsif object.sighting_year
+  	# 	object.sighting_year.strftime('%Y')
   	else
   		"no_response"
   	end
