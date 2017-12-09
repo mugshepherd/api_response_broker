@@ -1,6 +1,7 @@
 class ResponsesController < ApplicationController
 def index
-		@responses = Response.get_api_info
+    # @responses = Response.get_api_info
+		@responses = Response.seedData
 		# puts "!!![count from api] @responses count: #{@responses.count}"
 		# puts "!!![count from database] @responses count: #{Response.all.count}" 
 		@responses.each do |response|

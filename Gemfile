@@ -28,6 +28,7 @@ gem 'figaro' # run bundle exec figaro install
 
 # Use unicorn as the app server
 gem 'unicorn'
+gem 'json', github: 'flori/json', branch: 'v1.8'
 
 # Deploy with Capistrano
 # gem 'capistrano', :group => :development
@@ -35,3 +36,4 @@ gem 'unicorn'
 # To use debugger
 # gem 'ruby-debug19', :require => 'ruby-debug'
 ruby '2.2.1'
+# ruby '2.4.1'

@@ -18,7 +18,7 @@ class Response < ActiveRecord::Base
 		# uri = "#{API_BASE_URL}/data/#{API_PK}?format=json"
 		# rest_resource = RestClient::Resource.new(uri, USERNAME, PASSWORD)
 		# response = rest_resource.get
-		records = JSON.parse(File.read('db/20171209_dataExport_20171209-184425.json'))
+		records = File.read('db/20171209_dataExport_20171209-184425.json')
 		JSON.parse records
 	end
 end
