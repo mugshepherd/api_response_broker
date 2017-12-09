@@ -6,7 +6,8 @@
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)	
 Response.delete_all
-@responses = Response.get_api_info
+# @responses = Response.get_api_info
+@responses = Response.seedData
 @responses.each do |response|
   begin
   	#this pulls in new records that have been added to the api and adds them to the database.  it doesn't pull in records from the api that are already in the db
