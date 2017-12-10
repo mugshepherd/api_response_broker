@@ -1,6 +1,6 @@
 class Response < ActiveRecord::Base
 
-	require 'rest_client'
+	# require 'rest_client'
 
 	# USERNAME = ENV['API_USER']
 	# PASSWORD = ENV['API_PWD']
@@ -18,7 +18,8 @@ class Response < ActiveRecord::Base
 		# uri = "#{API_BASE_URL}/data/#{API_PK}?format=json"
 		# rest_resource = RestClient::Resource.new(uri, USERNAME, PASSWORD)
 		# response = rest_resource.get
-		records = File.read('db/20171209_dataExport_20171209-184425.json')
-		JSON.parse records
+		# response = File.read('db/20171209_dataExport_20171209-184425.json')
+		response = File.read('db/data_petLemurSurvey_20171210-132227.json')
+		JSON.parse response
 	end
 end

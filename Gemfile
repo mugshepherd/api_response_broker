@@ -9,10 +9,10 @@ gem 'rails_12factor', group: :production
 gem 'puma'
 
 # gem 'active_model_serializers', '~> 0.8.3'
-gem 'active_model_serializers'
-# gem 'active_model_serializers', :git => 'git://github.com/AskNative/active_model_serializers.git', :branch => '0-8-stable'
+# gem 'active_model_serializers'
+gem 'active_model_serializers', :git => 'git://github.com/AskNative/active_model_serializers.git', :branch => '0-8-stable'
 gem 'rest-client'
-gem 'pg'
+gem 'pg', '~>0.20.0' # there is an issue with 0.21 with rails 4.
 gem 'rails', '4.2.5.1'
 gem 'rails-api'
 gem 'spring', :group => :development
