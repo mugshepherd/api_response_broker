@@ -9,7 +9,8 @@ gem 'rails_12factor', group: :production
 gem 'puma'
 
 # gem 'active_model_serializers', '~> 0.8.3'
-gem 'active_model_serializers', :git => 'git://github.com/AskNative/active_model_serializers.git', :branch => '0-8-stable'
+gem 'active_model_serializers'
+# gem 'active_model_serializers', :git => 'git://github.com/AskNative/active_model_serializers.git', :branch => '0-8-stable'
 gem 'rest-client'
 gem 'pg'
 gem 'rails', '4.2.5.1'
@@ -28,7 +29,7 @@ gem 'figaro' # run bundle exec figaro install
 
 # Use unicorn as the app server
 gem 'unicorn'
-gem 'json', github: 'flori/json', branch: 'v1.8'
+gem 'json'
 
 # Deploy with Capistrano
 # gem 'capistrano', :group => :development
